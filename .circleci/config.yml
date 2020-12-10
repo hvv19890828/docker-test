@@ -12,5 +12,6 @@ jobs:
           name: image build
           command: docker build --cache-from nginx --build-arg GCP_CREDS="${GOOGLE_CREDENTIALS}" -t kw-datalake-dlp .
 workflows:
+  main:
      jobs:
       - image-build
